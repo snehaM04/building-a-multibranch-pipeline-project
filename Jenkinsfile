@@ -22,7 +22,7 @@ pipeline {
             }
             steps {
                 bat '"C:\\program Files\\Git\\bin\\bash.exe" ./jenkins/scripts/deliver-for-development.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)' , timeout: 300
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 bat '"C:\\program Files\\Git\\bin\\bash.exe" ./jenkins/scripts/kill.sh'
             }
         }
@@ -32,7 +32,7 @@ pipeline {
             }
             steps {
                 bat '"C:\\program Files\\Git\\bin\\bash.exe" ./jenkins/scripts/deploy-for-production.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)' , timeout: 300
+                input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 bat '"C:\\program Files\\Git\\bin\\bash.exe" ./jenkins/scripts/kill.sh'
             }
         }
