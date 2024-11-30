@@ -12,10 +12,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    if (isUnix()) {
-                        sh './jenkins/scripts/test.sh'
-                    } else {
-                        bat 'jenkins\\scripts\\test.bat'
+                        bat '"C:\\program Files\\Git\\bin\\bash.exe" -c "chmod +x ./jenkins/scripts/test.sh && ./jenkins/scripts/test.sh"'
                     }
                 }
             }
